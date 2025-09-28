@@ -1,0 +1,23 @@
+@model List<ConferenciaLinhaProducao.Models.Usuario>
+
+<h2>Lista de Usuários</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Login</th>
+            <th>Papel</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Login</td>
+                <td>@usuario.Papel</td>
+            </tr>
+        }
+    </tbody>
+</table>

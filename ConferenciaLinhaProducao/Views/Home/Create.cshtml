@@ -1,0 +1,43 @@
+@model ConferenciaLinhaProducao.Models.Produto
+
+<h2>Adicionar Produto</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Nome</label>
+        <input asp-for="Nome" />
+    </div>
+    <div>
+        <label>Código</label>
+        <input asp-for="Codigo" />
+    </div>
+    <div>
+        <label>Fornecedor</label>
+        <input asp-for="Fornecedor" />
+    </div>
+    <div>
+        <label>Nota Fiscal</label>
+        <input asp-for="NotaFiscal" />
+    </div>
+    <div>
+        <label>Quantidade de Paletes</label>
+        <input asp-for="QuantidadePaletes" type="number" />
+    </div>
+    <div>
+        <label>Rua</label>
+        <input asp-for="Rua" />
+    </div>
+    <div>
+        <label>Linha de Produção</label>
+        <input asp-for="LinhaProducao" />
+    </div>
+    <div>
+        <label>Status</label>
+        <select asp-for="Status">
+            <option value="Rodando">Rodando</option>
+            <option value="Estocado">Estocado</option>
+            <option value="Vazio">Vazio</option>
+        </select>
+    </div>
+    <button type="submit">Salvar</button>
+</form>

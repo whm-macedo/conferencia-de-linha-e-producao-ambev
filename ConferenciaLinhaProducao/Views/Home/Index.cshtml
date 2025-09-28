@@ -1,0 +1,33 @@
+﻿@model List<ConferenciaLinhaProducao.Models.Produto>
+
+<h2>Lista de Produtos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Código</th>
+            <th>Fornecedor</th>
+            <th>Nota Fiscal</th>
+            <th>Quantidade de Paletes</th>
+            <th>Rua</th>
+            <th>Linha de Produção</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Codigo</td>
+                <td>@produto.Fornecedor</td>
+                <td>@produto.NotaFiscal</td>
+                <td>@produto.QuantidadePaletes</td>
+                <td>@produto.Rua</td>
+                <td>@produto.LinhaProducao</td>
+                <td>@produto.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
